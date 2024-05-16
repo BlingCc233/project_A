@@ -19,6 +19,7 @@ phi_values = np.array(phi_values)
 
 # 定义最小二乘法函数来估计高程
 def estimate_height_lstsq(k_values, phi_values):
+    print(phi_values.shape)
     num_measurements, num_pixels = phi_values.shape
     heights = np.zeros(num_pixels)
 

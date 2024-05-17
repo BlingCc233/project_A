@@ -1,4 +1,4 @@
-import cv2
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -58,8 +58,7 @@ def idct(F):
 
 
 
-# Read image
-img = cv2.imread("imori.jpg").astype(np.float32)
+img = []
 
 # DCT
 F = dct(img)
@@ -67,7 +66,3 @@ F = dct(img)
 # IDCT
 out = idct(F)
 
-# Save result
-cv2.imshow("result", out)
-cv2.waitKey(0)
-cv2.imwrite("out.jpg", out)
